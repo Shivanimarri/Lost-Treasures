@@ -1,0 +1,37 @@
+extends base.pug
+
+block style
+    style
+        include ../static/form.css
+block content
+    .container
+        h1 LOST FORM
+        form(action='/addlostitem' method='post')
+          .form-group
+             label(for='item') Type of Item:
+             input(type='text' name='item' required='')
+          .form-group
+             label(for='location') Where it was lost:
+             input(type='text' name='location' required='')
+          .form-group
+             label(for='date') lost_date :
+             input(type='date' name='date' required='')
+          .form-group
+             label(for='description') Item Description:
+             textarea(name='description' required='')
+          .form-group
+             label(for='image') Upload Image:
+             input(type='file' name='image')
+          .form-group
+             label(for='name') Your Name:
+             input(type='text' name='name' required='')
+          .form-group
+             label(for='semester') Semester:
+             input(type='Number' name='semester' required='')
+          .form-group
+             label(for='department') Department:
+             input(type='text' name='department' required='')
+          .form-group
+             label(for='contact') Contact Number:
+             input(type='tel' name='contact' required='')
+          button(type='submit') Submit

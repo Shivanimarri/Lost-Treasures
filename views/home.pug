@@ -1,0 +1,37 @@
+extends base.pug
+
+block style
+    style
+        include ../static/home-style.css
+
+block content
+    div#whole
+        nav
+            img.logo(src='../static/logo.png', alt='CBIT Logo') 
+            a(href='/lost') Lost
+            a(href='/found') Found
+            a(href='/items') Items
+
+
+        section#mainarea
+            h1 LOST AND FOUND
+            main
+                h2 Welcome to Our Lost and Found Website!
+                p.a Have you lost something important or found an item that doesn't belong to you? You're in the
+                p.a right place! Our Lost and Found service is here to help you reunite with your belongings or
+                p.a return lost items to their rightful owners.
+                h3 How It Works
+                h4 If you've lost something:
+                    ol
+                        li Click on "Lost" button and report the lost item by providing details such as a description, when and where it was lost.
+                        li Click on "Items" button. Check regularly for updates on found items which are appeared in "Green colour" that match your description.
+                        li If your item is found, contact with the person who has found your item to arrange for its return.
+                h4 If you've found something:
+                    ol
+                        li Click on the "Found" button and report the found item by providing details such as a description, when and where it was found.
+                        li Click on "Items" and help us reunite the item with its owner by checking for any matching lost item reports which are appeared in "Red colour".
+                        li Coordinate with the owner to return the item.
+
+
+
+ 

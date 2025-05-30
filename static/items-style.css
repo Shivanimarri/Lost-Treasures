@@ -1,0 +1,75 @@
+body{
+  background-color: #94DDDE;
+  margin:0px;
+  padding:0px;
+}
+nav img{
+  padding-left:30px;
+  padding-right: 1050px;
+  height:80px;
+  width:60px;
+}
+nav {
+  background-color:#448CCE;
+  padding: 8px;
+  display:flex;
+  flex-direction:row;
+  justify-items: center;
+  align-items: center;
+}
+
+nav a {
+  font-size: 30px;
+  color: #fff;
+  text-decoration: none;
+  padding: 0px;
+  margin: 0 40px;
+}
+h2{
+  padding-left:10px;
+  color: #143C3C;
+  font-size: 30px;
+
+}
+
+.item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 15px;
+  width:500px;
+}
+section img{
+  width:200px;
+  height:200px;
+}
+.item.found-item {
+  background-color: rgb(219, 255, 219);
+  margin:10px;
+}
+
+.item.lost-item {
+  background-color: rgb(255, 219, 219);
+  margin:10px;
+}
+
+.item h2{
+  font-size: 20px;
+  margin: 5px;
+  padding:0px;
+}
+
+.item p {
+  font-size: 15px;
+  color: #143C3C;
+  margin: 5px;
+}
+
+button{
+  all: unset;
+}
+
+button img{
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+} 

@@ -1,0 +1,56 @@
+extends base.pug
+
+block style
+    style
+        include ../static/items-style.css
+
+block content
+    .container
+        nav
+            img.logo(src='../static/logo.png', alt='CBIT Logo') 
+            a(href='/lost') Lost
+            a(href='/found') Found
+
+
+        section
+            h2 Found Items
+            each item in items
+                if item.found
+                    .item.found-item
+                        img(src=item.imgUrl, alt='Item Image')
+                        h2= item.item
+                        p Location: #{item.location}
+                        p Date: #{item.date}
+                        p Description: #{item.description}
+                        p Semester: #{item.semester}
+                        p Department: #{item.department}
+                        p Contact: #{item.contact}
+                        p TypeOfItem: #{item.found ? 'Found Item' : 'Lost Item'}
+
+
+                        form(action=`/items/${item._id}?_method=DELETE`, method='POST')
+                            button(type='submit')
+                                img(src='../static/delete.png', alt='Delete Icon')
+
+
+        section
+            h2 Lost Items
+            each item in items
+                if !item.found
+                    .item.lost-item
+                        img(src=item.imgUrl, alt='Item Image')
+                        h2= item.item
+                        p Location: #{item.location}
+                        p Date: #{item.date}
+                        p Description: #{item.description}
+                        p Semester: #{item.semester}
+                        p Department: #{item.department}
+                        p Contact: #{item.contact}
+                        p TypeOfItem: #{item.found ? 'Found Item' : 'Lost Item'}
+
+
+                        form(action=`/items/${item._id}?_method=DELETE`, method='POST')
+                            button(type='submit')
+                                img(src='../static/delete.png', alt='Delete Icon')
+
+
