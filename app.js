@@ -7,6 +7,8 @@ const port = 3000;
 
 const itemsRouter = require("./router/item-router")
 
+require('dotenv').config();
+
 app.use(express.json());
 app.use('/static', express.static('static')) 
 
@@ -15,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'pug'); 
 app.set('views', path.join(__dirname, 'views')); 
 
-mongoose.connect("mongodb+srv://marrishivani23:Marri1234@lostandfoundcluster.ticojfu.mongodb.net/")
+mongoose.connect(process.env.MONGO_URI)
     .then(() => {
         console.log("Connected to database");
     })
